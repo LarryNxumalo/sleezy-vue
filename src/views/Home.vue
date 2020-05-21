@@ -1,18 +1,43 @@
+/* eslint-disable prettier/prettier */ /* eslint-disable prettier/prettier */
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+    <div class="main-wrapper">
+        <Header :isMobile="false" />
+        <div class="home-content">
+            <slide-show ref="slideshow" />
+                <div class="arrows prev"></div>
+                <div class="arrows next"></div>
+        </div>
+        <Footer />
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Header from "../components/Header";
+import SlideShow from "../components/SlideShow";
+import Footer from "../components/Footer";
+
 
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  }
+    components: {
+        Header,
+        SlideShow,
+        Footer
+    },
+    data() {
+        return {
+            isMobile: true
+        };
+    },
+
+    mounted() {
+        // page load calls
+
+
+
+        if (window.innerWidth <= 768) {
+            console.log('isMobile');
+            this.isMobile = true;
+        }
+    }
 };
 </script>

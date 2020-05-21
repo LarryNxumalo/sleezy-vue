@@ -1,28 +1,44 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
+import Router from "vue-router";
 import Home from "../views/Home.vue";
 
-Vue.use(VueRouter);
 
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
-];
+Vue.use(Router);
 
-const router = new VueRouter({
-  routes
+import Contact from "../views/Contact.vue";
+import Gallery from "../views/Gallery.vue";
+import Music from "../views/Music.vue";
+import Profile from "../views/Profile.vue";
+
+
+
+export default new Router({
+  routes: [
+    {
+      path: "/",
+      // redirect: 'products',
+      name: "home",
+      component: Home
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: Contact
+    },
+    {
+      path: "/gallery",
+      name: "gallery",
+      component: Gallery
+    },
+    {
+      path: "/music",
+      name: "music",
+      component: Music
+    },
+    {
+      path: "/profile",
+      name: "profile",
+      component: Profile
+    }
+  ]
 });
-
-export default router;

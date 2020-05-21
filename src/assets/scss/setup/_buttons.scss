@@ -1,0 +1,32 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out 0.25s;
+
+    &.navigation {
+        font-size: 20px;
+        line-height: 24px;
+        text-transform:uppercase;
+        width: 13vw;
+        height: 18vh;
+        color: $white;
+        background: $black;
+        border: none;
+        margin-right:16px;
+           svg {
+                margin-right: 8px;
+                fill: $white;
+            }
+
+        &:hover {
+            color: $black;
+            background: $white;
+            svg {
+                margin-right: 8px;
+                fill: $black;
+            }
+        }
+    }
+
+}

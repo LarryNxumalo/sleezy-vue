@@ -1,0 +1,125 @@
+.contact-wrapper {
+    width: 100vw;
+    height: 200vh;
+    padding-top: 150px;
+
+    .contact-content {
+        width: 100vw;
+        height: 70vh;
+        padding: 79px 140px 0 140px;
+        background: $black;
+        transition: all ease 1s;
+    }
+
+  .contact {
+    background: $white;
+    width: 100vw;
+    height: 100vh;
+    padding: 79px 140px 0 140px;
+
+    form {
+      max-width:483px;
+      min-height:454px;
+      display:flex;
+      flex-direction:column;
+      justify-content: space-evenly;
+
+  input {
+      width: 482px;
+      height: 45px;
+      border: 1px solid $dark-gray;
+      border-radius:10px;
+      padding: 13px 7px 7px 13px;
+      background: #fff;
+      position:relative;
+      &::placeholder{
+        opacity: 0.43;
+        font-size:21px;
+
+          }
+      }
+
+      textarea {
+          border: 1px solid $dark-gray;
+          border-radius:10px;
+          width: 482px;
+          height: 167px;
+          padding: 13px 7px 7px 13px;
+
+          &::placeholder{
+          opacity: 0.43;
+          font-size:21px;
+          }
+      }
+  }
+}
+
+}
+
+@include break-point(tablet-portrait) {}
+
+@include break-point(mobile) {
+
+    .contact-wrapper {
+        width: 100vw;
+        height: 150vh;
+        padding-top: 80px;
+
+        .contact-content {
+            width: 100vw;
+            height: 70vh;
+            padding: 79px 140px 0 140px;
+            background: $black;
+            transition: all ease 1s;
+        }
+
+      .contact {
+        width: 100vw;
+        height: 50vh;
+        padding: 45px;
+
+
+        form {
+            margin: 0 auto;
+          width:483px;
+          height:454px;
+          display:flex;
+          flex-direction:column;
+          justify-content: space-evenly;
+
+      input {
+          width: 282px;
+          height: 45px;
+          border: 1px solid $dark-gray;
+          border-radius:10px;
+          padding: 13px 7px 7px 13px;
+          background: #fff;
+          position:relative;
+          &::placeholder{
+            opacity: 0.43;
+            font-size:21px;
+
+              }
+          }
+
+          textarea {
+              border: 1px solid $dark-gray;
+              border-radius:10px;
+              width: 282px;
+              height: 167px;
+              padding: 13px 7px 7px 13px;
+
+              &::placeholder{
+              opacity: 0.43;
+              font-size:21px;
+              }
+          }
+      }
+    }
+
+    }
+
+
+
+
+}

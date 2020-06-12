@@ -21,6 +21,47 @@ header {
 
     .link-wrapper {
         display:flex;
+
+        .btn {
+
+            .subnav-content {
+                display: none;
+                position: absolute;
+                bottom: 0;
+                left: 70%;
+                background-color: white;
+                width: 30%;
+                z-index: 1;
+                // transition: all ease 3s;
+              }
+
+              &:hover {
+
+                  .subnav-content {
+                    margin-top: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // flex-direction: column;
+                    // margin-bottom: 0px;
+
+                   a {
+                    color: black;
+                    text-decoration: none;
+                    padding: 10px;
+                    // margin-right:200px;
+                   }
+                    &:hover {
+
+                       a {
+                           color: black;
+                       }
+                    }
+                  }
+              }
+        }
+
+
     }
 
     .mobile-burger {
@@ -73,7 +114,7 @@ header {
 
         .mobile-nav {
             border-radius: 0 0 0 27px;
-            position: absolute;
+            position: fixed;
             width: 100vw;
             height: 100vh;
             background-color: black;
@@ -110,8 +151,7 @@ header {
                 top: 50%;
                 left: 85%;
                 transform: translate( -50%, -50%);
-
-                z-index: 9999;
+                z-index: 9999;///////////
             }
         }
             //transition for mobile nav
@@ -141,7 +181,7 @@ header {
             transform: translate( -85%, -50%);
             z-index: 9999;
             width:150px;
-           
+
         }
 
         .link-wrapper {
@@ -155,13 +195,13 @@ header {
                 top: 50%;
                 left: 85%;
                 transform: translate( -50%, -50%);
-                z-index: 9999;
+                z-index: 9999;//////////////
             }
         }
 
         .mobile-nav {
             border-radius: 0 0 0 27px;
-            position: absolute;
+            position: fixed;
             width: 100vw;
             height: 200vh;
             // max-height: 100vh;
@@ -188,8 +228,6 @@ header {
                     border: none;
                     border-bottom: 1px solid $white;
                 }
-
-
             }
 
             .close {
@@ -200,7 +238,7 @@ header {
                 top: 50%;
                 left: 85%;
                 transform: translate( -50%, -50%);
-                z-index: 9999;
+                z-index: 9999;////////////
             }
         }
          //transition for mobile nav

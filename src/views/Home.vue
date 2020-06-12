@@ -4,8 +4,8 @@
         <Header :isMobile="false" />
         <div class="home-content">
             <slide-show ref="slideshow" />
-                <div class="arrows prev"></div>
-                <div class="arrows next"></div>
+            <div class="arrows prev"></div>
+            <div class="arrows next"></div>
         </div>
         <Footer />
     </div>
@@ -15,7 +15,6 @@
 import Header from "../components/Header";
 import SlideShow from "../components/SlideShow";
 import Footer from "../components/Footer";
-
 
 export default {
     components: {
@@ -31,11 +30,7 @@ export default {
 
     mounted() {
         // page load calls
-
-
-
         if (window.innerWidth <= 768) {
-            console.log('isMobile');
             this.isMobile = true;
         }
     }

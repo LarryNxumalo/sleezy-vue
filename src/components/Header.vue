@@ -1,7 +1,12 @@
 <template>
     <header class="head">
         <router-link to="/">
-            <img class="logo" src="../assets/images/logo/logo.png" srcset="../assets/images/logo/logo@2x.png 2x"  alt="logo">
+            <img
+                class="logo"
+                src="../assets/images/logo/logo.png"
+                srcset="../assets/images/logo/logo@2x.png 2x"
+                alt="logo"
+            />
         </router-link>
 
         <div
@@ -86,7 +91,11 @@
                             transform="translate(-1.5 -4.5)"
                         />
                     </svg>
-                    GALLERY
+                    MEDIA
+                    <div class="subnav-content">
+                        <a href="#videos">Videos</a>
+                        <a href="#gallery">Gallery</a>
+                    </div>
                 </button>
             </router-link>
 
@@ -177,7 +186,7 @@
                 </router-link>
                 <router-link to="/gallery">
                     <button class="btn-mobile">
-                        GALLERY
+                        MEDIA
                     </button>
                 </router-link>
                 <router-link to="/contact">
@@ -185,8 +194,6 @@
                         CONTACT
                     </button>
                 </router-link>
-
-
             </div>
         </transition>
     </header>
@@ -208,10 +215,6 @@ export default {
     },
 
     mounted() {
-
-
-
-
         if (window.innerWidth <= 600) {
             console.log("isMobile");
             this.isMobile = true;
